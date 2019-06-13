@@ -10,7 +10,7 @@ import Foundation
 
 
 public extension UITableViewCell {
-    class internal func nibWithIdentifier(identifier: String) -> UINib{
+    class public func nibWithIdentifier(identifier: String) -> UINib{
         return UINib(nibName: identifier, bundle: nil)
     }
     
@@ -20,7 +20,7 @@ public extension UITableViewCell {
      - parameter table:      table description
      - parameter identifier: identifier description
      */
-    class func registerTable(table: UITableView, nibIdentifier identifier: String) {
+    class public func registerTable(table: UITableView, nibIdentifier identifier: String) {
         return table.register(self.nibWithIdentifier(identifier: identifier), forCellReuseIdentifier: identifier)
     }
     
@@ -31,7 +31,7 @@ public extension UITableViewCell {
      - parameter obj:       obj description
      - parameter indexPath: indexPath description
      */
-    func configure(cell: UITableViewCell, customObj obj: AnyObject, indexPath: NSIndexPath) {
+    public func configure(cell: UITableViewCell, customObj obj: AnyObject, indexPath: NSIndexPath) {
         // Rewrite this func in SubClass !
     }
     
@@ -43,7 +43,7 @@ public extension UITableViewCell {
      
      - returns: return value description
      */
-    class func getCellHeightWithCustomObj(obj: AnyObject?, indexPath: NSIndexPath) -> CGFloat {
+    class public func getCellHeightWithCustomObj(obj: AnyObject?, indexPath: NSIndexPath) -> CGFloat {
         // Rewrite this func in SubClass if necessary
         return obj == nil ? 44.0 : 0.0   // default cell height 44.0
     }

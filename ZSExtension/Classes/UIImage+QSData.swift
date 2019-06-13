@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import ZSAppConfig
 
 extension UIImage{
-    static func image(with base64:String) -> UIImage? {
+    public static func image(with base64:String) -> UIImage? {
         let data:Data? = Data(base64Encoded: base64, options: .ignoreUnknownCharacters)
         if let decodeData = data{
             return UIImage(data: decodeData)
@@ -18,7 +19,7 @@ extension UIImage{
         return nil
     }
     
-    static func image(from url:String)->UIImage?{
+    public static func image(from url:String)->UIImage?{
         var image:UIImage?
         DispatchQueue.global().async {
             do{
@@ -35,13 +36,13 @@ extension UIImage{
         return image
     }
     
-    func imageHasAlpha(image:UIImage)->Bool{
+    public func imageHasAlpha(image:UIImage)->Bool{
         let alpha:CGImageAlphaInfo? = image.cgImage?.alphaInfo
         return (alpha == CGImageAlphaInfo.first || alpha == CGImageAlphaInfo.last  || alpha == CGImageAlphaInfo.premultipliedLast || alpha == CGImageAlphaInfo.premultipliedFirst)
         
     }
     
-    func base64() -> String? {
+    public func base64() -> String? {
         var imageData:Data?
         var mimeType:String?
         if self.imageHasAlpha(image: self) {
@@ -56,7 +57,7 @@ extension UIImage{
         return imageData?.base64EncodedString(options: .endLineWithCarriageReturn)
     }
     
-    func qs_drawRectWithRoundedCorner(radius: CGFloat, _ sizetoFit: CGSize) -> UIImage {
+    public func qs_drawRectWithRoundedCorner(radius: CGFloat, _ sizetoFit: CGSize) -> UIImage {
         let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: sizetoFit)
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, UIScreen.main.scale)

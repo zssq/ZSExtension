@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZSExtension'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'ZSExtension.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,11 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'Alamofire'
+   s.dependency 'SQLite.swift', '0.11.5'
+   s.dependency 'PKHUD', '5.2.1'
+   s.dependency 'MBProgressHUD'
+   s.dependency 'ZSAppConfig'
+   s.dependency 'Kingfisher'
+   s.dependency 'YYCategories'
 end

@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import CommonCrypto
+import ZSAppConfig
 
 extension String {
     
     //MARK: - crypto
-    func md5() ->String{
+    public func md5() ->String{
         let str = self.cString(using: String.Encoding.utf8)
         let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
@@ -26,7 +28,7 @@ extension String {
     }
     
     //由于移动设备的内存有限,以下代码实现是将文件分块读出并且计算md5值的方法
-    func fileMD5()->String? {
+    public func fileMD5()->String? {
         let handler = FileHandle(forReadingAtPath: self)
         if handler == nil {
             return nil
@@ -56,7 +58,7 @@ extension String {
     }
     
     //MARK: - Sub string Half open
-    func qs_subStr(start:Int,end:Int)->String{
+    public func qs_subStr(start:Int,end:Int)->String{
         if self == "" {
             return self
         }
@@ -71,7 +73,7 @@ extension String {
         return String(sub)
     }
     
-    func qs_subStr(start:Int,length:Int)->String{
+    public func qs_subStr(start:Int,length:Int)->String{
         if self == "" {
             return self
         }
@@ -82,7 +84,7 @@ extension String {
         return String(sub)
     }
     
-    func qs_subStr(from:Int)->String{
+    public func qs_subStr(from:Int)->String{
         if self == "" {
             return self
         }
@@ -93,7 +95,7 @@ extension String {
         return String(sub)
     }
     
-    func qs_subStr(to:Int)->String{
+    public func qs_subStr(to:Int)->String{
         if self == "" {
             return self
         }
@@ -104,7 +106,7 @@ extension String {
         return String(sub)
     }
     
-    func qs_subStr(range:CountableRange<Int>)->String{
+    public func qs_subStr(range:CountableRange<Int>)->String{
         if  self == "" {
             return self
         }
@@ -114,7 +116,7 @@ extension String {
         return sub
     }
     
-    func qs_subStr(range:NSRange)->String{
+    public func qs_subStr(range:NSRange)->String{
         if  self == "" {
             return self
         }
@@ -124,7 +126,7 @@ extension String {
     }
     
     //MARK:- count
-    func qs_width(_ font:UIFont,height:CGFloat) ->CGFloat
+    public func qs_width(_ font:UIFont,height:CGFloat) ->CGFloat
     {
         let dict = [NSAttributedString.Key.font:font]
         let sttt:NSString = self as NSString
@@ -132,7 +134,7 @@ extension String {
         return rect.size.width
     }
     
-    func qs_height(_ font:UIFont,width:CGFloat) ->CGFloat
+    public func qs_height(_ font:UIFont,width:CGFloat) ->CGFloat
     {
         let dict = [NSAttributedString.Key.font:font]
         let sttt:NSString = self as NSString
@@ -140,14 +142,14 @@ extension String {
         return rect.size.height
     }
     
-    func qs_width(_ fontSize:CGFloat,height:CGFloat) -> CGFloat{
+    public func qs_width(_ fontSize:CGFloat,height:CGFloat) -> CGFloat{
         let dict = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: fontSize)]
         let sttt:NSString = self as NSString
         let rect:CGRect = sttt.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(height)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: dict, context: nil)
         return rect.size.width
     }
     
-    func qs_height(_ fontSize:CGFloat,width:CGFloat) ->CGFloat
+    public func qs_height(_ fontSize:CGFloat,width:CGFloat) ->CGFloat
     {
         let dict = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: fontSize)]
         let sttt:NSString = self as NSString
@@ -157,7 +159,7 @@ extension String {
     
     
     //获取子字符串
-    func substingInRange(_ r: Range<Int>) -> String? {
+    public func substingInRange(_ r: Range<Int>) -> String? {
         if r.lowerBound < 0 || r.upperBound > self.count {
             return nil
         }
@@ -167,7 +169,7 @@ extension String {
     }
     
     //MARK: - equal
-    func isEqual(to string:String) ->Bool {
+    public func isEqual(to string:String) ->Bool {
         if self == string {
             return true
         }
@@ -175,11 +177,11 @@ extension String {
     }
     
     //MARK: - string
-    func asNSString() ->NSString {
+    public func asNSString() ->NSString {
         return (self as NSString)
     }
     
-    func isEmpty() ->Bool {
+    public func isEmpty() ->Bool {
         if self == "" || self.count == 0 {
             return true
         }
@@ -187,11 +189,11 @@ extension String {
     }
     
     //MARK: - transform
-    var length:Int {
+    public var length:Int {
         return self.lengthOfBytes(using: .utf8)
     }
     
-    var toArray:Array<[String:Any]>? {
+    public var toArray:Array<[String:Any]>? {
         var json = self
         if json.contains("\\") {
             json = json.components(separatedBy: "\\").joined()
@@ -207,7 +209,7 @@ extension String {
         return nil
     }
     
-    var toDict:Dictionary<String,Any>? {
+    public var toDict:Dictionary<String,Any>? {
         var json = self
         if json.contains("\\") {
             json = json.components(separatedBy: "\\").joined()

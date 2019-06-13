@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct Value<Base> {
+public struct Value<Base> {
     let base: Base
 }
 
-protocol ValueCompatible {
+public protocol ValueCompatible {
     var value: Value<Self> { get }
 }
 
 extension ValueCompatible {
-    var value: Value<Self> {
+    public var value: Value<Self> {
         return Value(base: self)
     }
 }

@@ -10,23 +10,23 @@ import Foundation
 import UIKit
 
 extension UIColor{
-    func daylightTextColor()->UIColor{
+    public func daylightTextColor()->UIColor{
         return UIColor.black
     }
     
-    func daylightToolBarColor()->UIColor{
+    public func daylightToolBarColor()->UIColor{
         return UIColor.black
     }
     
-    func nightCellColor()->UIColor{
+    public func nightCellColor()->UIColor{
         return UIColor.black
     }
     
-    func nightSegColor()->UIColor{
+    public func nightSegColor()->UIColor{
         return UIColor.darkGray
     }
     
-    func nightNavColor()->UIColor{
+    public func nightNavColor()->UIColor{
         return UIColor.darkGray
     }
     

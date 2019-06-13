@@ -25,7 +25,7 @@ extension Dictionary {
     public func value(at index:Int) ->Any?{
         let dict = self as NSDictionary
         let values = dict.allValues
-        let value = values[index] as? BookDetail
+        let value = values[index]
         return value
     }
     
@@ -42,7 +42,7 @@ extension Dictionary {
     }
     
     //MARK: - transform
-    var toJSON: String {
+    public var toJSON: String {
         if !JSONSerialization.isValidJSONObject(self) {
             return ""
         }
@@ -57,7 +57,7 @@ extension Dictionary {
 
 extension Dictionary where Value: Any {
     
-    func decoding<T>(with key: Key) -> T? {
+    public func decoding<T>(with key: Key) -> T? {
         guard let any: Any = self[key] else {
             return nil
         }

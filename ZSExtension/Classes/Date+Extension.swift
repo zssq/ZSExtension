@@ -9,7 +9,7 @@
 import Foundation
 
 extension Date{
-    func year()->Int{
+    public func year()->Int{
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -18,7 +18,7 @@ extension Date{
         return dayComponents?.year ?? 0
     }
     
-    func month()->Int {
+    public func month()->Int {
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -27,7 +27,7 @@ extension Date{
         return dayComponents?.month ?? 0
     }
     
-    func day()->Int {
+    public func day()->Int {
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -36,7 +36,7 @@ extension Date{
         return dayComponents?.day ?? 0
     }
     
-    func hour()->Int {
+    public func hour()->Int {
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -45,7 +45,7 @@ extension Date{
         return dayComponents?.hour ?? 0
     }
     
-    func minute()->Int {
+    public func minute()->Int {
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -54,7 +54,7 @@ extension Date{
         return dayComponents?.minute ?? 0
     }
     
-    func second()->Int {
+    public func second()->Int {
         let calendar = Calendar.current
         var dayComponents:DateComponents?
         if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0 {
@@ -63,7 +63,7 @@ extension Date{
         return dayComponents?.second ?? 0
     }
     
-    func days(month:Int)->Int{
+    public func days(month:Int)->Int{
         var days = 0
         switch month {
             case 1,3,5,7,8,10,12:
@@ -80,7 +80,7 @@ extension Date{
         return days
     }
     
-    func isLeapYear()->Bool{
+    public func isLeapYear()->Bool{
         let year = self.year()
         if (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 {
             return true
@@ -88,7 +88,7 @@ extension Date{
         return false
     }
     
-    static func timeInterval(from formDate:Date?,to toDate:Date?)->TimeInterval{
+    public static func timeInterval(from formDate:Date?,to toDate:Date?)->TimeInterval{
         if formDate == nil || toDate == nil {
             return 0
         }

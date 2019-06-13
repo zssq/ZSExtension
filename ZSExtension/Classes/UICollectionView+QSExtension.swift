@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol ReusableView: class {
+public protocol ReusableView: class {
     static var reuseId: String {get}
 }
 
 extension ReusableView where Self: UIView {
-    static var reuseId: String {
+    public static var reuseId: String {
         return String(describing: self)
     }
 }
@@ -24,18 +24,18 @@ extension UICollectionReusableView: ReusableView {
 }
 
 extension UICollectionView {
-    func qs_registerCellNib<T:UICollectionViewCell>(_ aClass:T.Type){
+    public func qs_registerCellNib<T:UICollectionViewCell>(_ aClass:T.Type){
         let name = String(describing: aClass)
         let nib = UINib(nibName: name, bundle: nil)
         self.register(nib, forCellWithReuseIdentifier: name)
     }
     
-    func qs_registerCellClass<T:UICollectionViewCell>(_ aClass:T.Type){
+    public func qs_registerCellClass<T:UICollectionViewCell>(_ aClass:T.Type){
         let name = String(describing:aClass)
         self.register(aClass, forCellWithReuseIdentifier: name)
     }
     
-    func qs_dequeueReusableCell<T:UICollectionViewCell>(_ aClass:T.Type, for indexPath:IndexPath)->T where T:ReusableView{
+    public func qs_dequeueReusableCell<T:UICollectionViewCell>(_ aClass:T.Type, for indexPath:IndexPath)->T where T:ReusableView{
         let name = String(describing:aClass)
         guard let cell = dequeueReusableCell(withReuseIdentifier: name, for: indexPath) as? T else {
             fatalError("\(name) is not registered")

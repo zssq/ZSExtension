@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UILabel{
-    func qs_setCreateTime(createTime:String,append:String){
+    public func qs_setCreateTime(createTime:String,append:String){
         if createTime.lengthOfBytes(using: String.Encoding.utf8) > 18{
             DispatchQueue.global().async {
                 let year = createTime.qs_subStr(to: 4)

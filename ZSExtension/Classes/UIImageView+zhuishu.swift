@@ -8,9 +8,28 @@
 
 import Foundation
 import UIKit
+import ZSAppConfig
+import Kingfisher
+
+public class ZSResource: Resource {
+    
+    public var imageURL:URL? = URL(string: "http://statics.zhuishushenqi.com/ranking-cover/142319144267827")
+    public var downloadURL: URL {
+        return imageURL!
+    }
+    
+    public var cacheKey: String{
+        return "\(String(describing: self.imageURL))"
+    }
+    
+    init(url:URL) {
+        self.imageURL = url
+    }
+    
+}
 
 extension UIImageView{
-    func qs_setBookCoverWithURLString(urlString:String){
+    public func qs_setBookCoverWithURLString(urlString:String){
         self.image = UIImage(named: "default_book_cover")
 //        DispatchQueue.global().async {
         let noPercentStr:String = urlString.removingPercentEncoding ?? ""
@@ -27,12 +46,12 @@ extension UIImageView{
                 QSLog("Invalid URL")
                 return
             }
-            let resource:QSResource = QSResource(url: imageURL)
+            let resource:ZSResource = ZSResource(url: imageURL)
             self.kf.setImage(with: resource, placeholder: UIImage(named: "default_book_cover"), options: nil, progressBlock: nil, completionHandler: nil)
 //        }
     }
     
-    func qs_setAvatarWithURLString(urlString:String){
+    public func qs_setAvatarWithURLString(urlString:String){
         self.image = UIImage(named: "default_avatar_light")
         let imageUrlString =  "\(IMAGE_BASEURL)\(urlString)"
         let url:URL? = URL(string: imageUrlString)
@@ -40,16 +59,16 @@ extension UIImageView{
             QSLog("Invalid URL")
             return
         }
-        let resource:QSResource = QSResource(url: imageURL)
+        let resource:ZSResource = ZSResource(url: imageURL)
         self.kf.setImage(with: resource, placeholder: UIImage(named: "default_avatar_light"), options: nil, progressBlock: nil, completionHandler: nil)
     }
     
-    func qs_addCorner(radius: CGFloat) {
+    public func qs_addCorner(radius: CGFloat) {
         //1.一种圆角添加方式，效率比直接CornerRadius高
         self.image = self.image?.qs_drawRectWithRoundedCorner(radius: radius, self.bounds.size)
     }
     
-    func qs_addCornerRadius(cornerRadius:CGFloat){
+    public func qs_addCornerRadius(cornerRadius:CGFloat){
         //2.高效添加圆角的方式
         let maskPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: CGSize(width:cornerRadius, height: cornerRadius))
         let maskLayer = CAShapeLayer()
@@ -60,7 +79,7 @@ extension UIImageView{
 }
 
 extension UIButton{
-    func qs_setBookCoverWithUrlString(urlString:String){
+    public func qs_setBookCoverWithUrlString(urlString:String){
         
         let noPercentStr:String = urlString.removingPercentEncoding ?? ""
         self.setImage(UIImage(named: "default_book_cover"), for: .normal)
@@ -76,7 +95,7 @@ extension UIButton{
             QSLog("Invalid URL")
             return
         }
-        let resource:QSResource = QSResource(url: imageURL)
+        let resource:ZSResource = ZSResource(url: imageURL)
         self.kf.setImage(with:resource, for: .normal, placeholder: UIImage(named:"default_book_cover"), options: nil, progressBlock: nil, completionHandler: nil)
     }
 }

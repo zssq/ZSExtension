@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 import PKHUD
+import YYCategories
+import ZSAppConfig
 
-func RGBAColor<T>(_ red:T, _ green:T, _ blue:T, _ alpha:CGFloat? = 1) -> UIColor {
+public func RGBAColor<T>(_ red:T, _ green:T, _ blue:T, _ alpha:CGFloat? = 1) -> UIColor {
     
     var redString = "\(red)"
     var greenString = "\(green)"
@@ -31,12 +33,11 @@ func RGBAColor<T>(_ red:T, _ green:T, _ blue:T, _ alpha:CGFloat? = 1) -> UIColor
 //        let blueFloatValue:CGFloat = blue as! CGFloat
 //        return UIColor(red: redFloatValue/255, green: greenFloatValue/255, blue: blueFloatValue/255, alpha: alpha ?? 1)
 //    }
-    
     return UIColor(hexString: "#\(redString)\(greenString)\(blueString)") ?? UIColor.black
 }
 
 extension UIView {
-    func screenShot()->UIImage?{
+    public func screenShot()->UIImage?{
         let size = self.bounds.size
         let transform:CGAffineTransform = __CGAffineTransformMake(-1, 0, 0, 1, size.width, 0)
         UIGraphicsBeginImageContextWithOptions(size, self.isOpaque, 0.0)
@@ -48,7 +49,7 @@ extension UIView {
         return image
     }
     
-    func nextController()->UIViewController?{
+    public func nextController()->UIViewController?{
         var nextResponder:UIResponder? = self.next
         while (nextResponder != nil) {
             if nextResponder?.isKind(of: UIViewController.self) == true {
@@ -59,19 +60,19 @@ extension UIView {
         return nil
     }
     
-    func showTipView(tip:String) {
+    public func showTipView(tip:String) {
         HUD.flash(.label(tip), delay: 3)
     }
     
-    func showProgress() {
+    public func showProgress() {
         HUD.flash(.labeledProgress(title: "正在请求...", subtitle: nil))
     }
     
-    func hideProgress() {
+    public func hideProgress() {
         HUD.hide(animated: true)
     }
     
-    func showTip(tip:String) {
+    public func showTip(tip:String) {
         let tag = 10124
         if let tipLabel = self.viewWithTag(tag) {
             tipLabel.removeFromSuperview()
@@ -94,16 +95,16 @@ extension UIView {
         }
     }
     
-    func addShadow(cornerRadius:CGFloat) {
+    public func addShadow(cornerRadius:CGFloat) {
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowRadius = cornerRadius
         self.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
         self.layer.shadowOpacity = 0.3
     }
     
-    static let shadowLayerAccess = "shadowLayerAccess"
-    static let backgroundViewAccess = "backgroundViewAccess"
-    func addShadow(borderRadius:CGFloat) {
+    public static let shadowLayerAccess = "shadowLayerAccess"
+    public static let backgroundViewAccess = "backgroundViewAccess"
+    public func addShadow(borderRadius:CGFloat) {
         if self.bounds.equalTo(CGRect.zero) {
             return
         }

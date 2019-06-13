@@ -12,11 +12,11 @@ import UIKit
 extension UITableView{
     
     
-    func checkEmpty(){
+    public func checkEmpty(){
         checkEmpty(title: nil, image: nil)
     }
     
-    func checkEmpty(title:String?,image:UIImage?){
+    public func checkEmpty(title:String?,image:UIImage?){
         guard let empDataSource = self.dataSource else {
             return
         }
@@ -35,21 +35,21 @@ extension UITableView{
         if sections == 0{
             isEmpty = true
         }
-        if isEmpty {
-            let emptyView = getEmptyView(title: title, image: image)
-            self.backgroundView = emptyView
-        }else{
-            self.backgroundView = nil
-        }
+//        if isEmpty {
+//            let emptyView = getEmptyView(title: title, image: image)
+//            self.backgroundView = emptyView
+//        }else{
+//            self.backgroundView = nil
+//        }
     }
     
-    func getEmptyView(title:String?,image:UIImage?)->EmptyView{
-        let emptyView:EmptyView? = UINib(nibName: "EmptyView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? EmptyView
-        emptyView?.tittle = title ?? ""
-        emptyView?.image  = image
-        emptyView?.reloadAction = {
-            self.reloadData()
-        }
-        return emptyView!
-    }
+//    func getEmptyView(title:String?,image:UIImage?)->EmptyView{
+//        let emptyView:EmptyView? = UINib(nibName: "EmptyView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? EmptyView
+//        emptyView?.tittle = title ?? ""
+//        emptyView?.image  = image
+//        emptyView?.reloadAction = {
+//            self.reloadData()
+//        }
+//        return emptyView!
+//    }
 }

@@ -9,20 +9,21 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import ZSAppConfig
 
-typealias AlertCallback = (_ action:UIAlertAction)->Void
+public typealias AlertCallback = (_ action:UIAlertAction)->Void
 
 extension UIViewController{
     
-    func alert(with title:String?,message:String?,okTitle:String?){
+    public func alert(with title:String?,message:String?,okTitle:String?){
         self.alert(with: title, message: message, okTitle: okTitle, cancelTitle: nil, okAction: nil, cancelAction: nil)
     }
     
-    func alert(with title:String?,message:String?,okTitle:String?,okAction:AlertCallback?){
+    public func alert(with title:String?,message:String?,okTitle:String?,okAction:AlertCallback?){
         self.alert(with: title, message: message, okTitle: okTitle, cancelTitle: nil, okAction: okAction, cancelAction: nil)
     }
     
-    func alert(with title:String?,message:String?,okTitle:String?,cancelTitle:String?,okAction:AlertCallback?,cancelAction:AlertCallback?){
+    public func alert(with title:String?,message:String?,okTitle:String?,cancelTitle:String?,okAction:AlertCallback?,cancelAction:AlertCallback?){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: okTitle, style: .default) { (alertAction) in
             if let action = okAction {
@@ -39,7 +40,7 @@ extension UIViewController{
         self.present(alert, animated: true, completion: nil)
     }
     
-    func hudAddTo(view:UIView,text:String,animated:Bool){
+    public func hudAddTo(view:UIView,text:String,animated:Bool){
         let hud = MBProgressHUD.showAdded(to: view, animated: animated)
         hud.mode = .text
         hud.label.text = text
@@ -48,7 +49,7 @@ extension UIViewController{
         
     }
     
-    func hudAddedTo(view:UIView,text:String,timeInterVal:TimeInterval,animated:Bool){
+    public func hudAddedTo(view:UIView,text:String,timeInterVal:TimeInterval,animated:Bool){
         let hud = MBProgressHUD.showAdded(to: view, animated: animated)
         hud.mode = MBProgressHUDMode.indeterminate
         hud.label.text = text
@@ -56,7 +57,7 @@ extension UIViewController{
         hud.hide(animated:animated, afterDelay:timeInterVal)
     }
     
-    func pregressHUDTo(view:UIView,animated:Bool) ->Void {
+    public func pregressHUDTo(view:UIView,animated:Bool) ->Void {
         let hud = MBProgressHUD.showAdded(to: view, animated: animated)
         hud.mode = MBProgressHUDMode.indeterminate
     }

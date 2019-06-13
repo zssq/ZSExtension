@@ -11,7 +11,7 @@ import Foundation
 public typealias NotificationHandler = () ->Void
 
 extension NotificationCenter {
-    static var observerHandler:NotificationHandler?
+    public static var observerHandler:NotificationHandler?
     
     public static func qs_addObserver(observer:Any,selector:Selector,name:String,object:Any?) -> Void {
         NotificationCenter.default.addObserver(observer, selector: selector, name: Notification.Name(rawValue: name), object: object)

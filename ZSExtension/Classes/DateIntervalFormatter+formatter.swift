@@ -9,7 +9,7 @@
 import Foundation
 
 extension DateIntervalFormatter{
-    func formatter(begin:Date?,end:Date?)->TimeInterval{
+    public func formatter(begin:Date?,end:Date?)->TimeInterval{
         if begin == nil || end == nil {
             return 0
         }
@@ -25,7 +25,7 @@ extension DateIntervalFormatter{
     }
     
     //Just something
-    func timeInfo(from:Date,to:Date)->String{
+    public func timeInfo(from:Date,to:Date)->String{
         let year = to.year() - from.year()
         let month = to.month() - from.month()
         let day = to.day() - from.day()
