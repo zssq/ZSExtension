@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZSExtension_Example' do
+  pod 'ZSExtension', :path => '../'
+
+  target 'ZSExtension_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
