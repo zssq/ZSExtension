@@ -1,0 +1,22 @@
+{
+  "name": "ZSExtension",
+  "version": "0.1.0",
+  "summary": "A short description of ZSExtension.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/2252055382@qq.com/ZSExtension",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "2252055382@qq.com": "caonongyun@guazi.com"
+  },
+  "source": {
+    "git": "https://github.com/2252055382@qq.com/ZSExtension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZSExtension/Classes/**/*"
+}
