@@ -1,22 +1,46 @@
 {
   "name": "ZSExtension",
-  "version": "0.1.0",
-  "summary": "A short description of ZSExtension.",
+  "version": "1.0.0",
+  "summary": "ZSExtension.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/2252055382@qq.com/ZSExtension",
+  "homepage": "https://github.com/zssq/ZSExtension",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "2252055382@qq.com": "caonongyun@guazi.com"
+    "2252055382@qq.com": "norycao"
   },
   "source": {
-    "git": "https://github.com/2252055382@qq.com/ZSExtension.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/zssq/ZSExtension.git",
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "ZSExtension/Classes/**/*"
+  "swift_version": "4.2",
+  "source_files": "ZSExtension/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "SQLite.swift": [
+      "0.11.5"
+    ],
+    "PKHUD": [
+      "5.2.1"
+    ],
+    "MBProgressHUD": [
+
+    ],
+    "ZSAppConfig": [
+
+    ],
+    "Kingfisher": [
+
+    ],
+    "YYCategories": [
+
+    ]
+  }
 }
