@@ -10,7 +10,7 @@ PODS:
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
   - ZSAppConfig (1.0.2)
-  - ZSExtension (1.0.0):
+  - ZSExtension (1.0.1):
     - Alamofire
     - Kingfisher
     - MBProgressHUD
@@ -45,7 +45,7 @@ SPEC CHECKSUMS:
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   ZSAppConfig: b7829e1fcfea4ff0dfd6a748020a2250c7e70bb7
-  ZSExtension: da8915f531eb0f5a4a36f6568c13686dd7c7e9b2
+  ZSExtension: a47be2b5c0a668a28a1ccae1918ae07b4970549d
 
 PODFILE CHECKSUM: 0b94534c13784995dab82cb0a86e2569e461ebd9
 
