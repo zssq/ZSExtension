@@ -1,3 +1,7 @@
 github "Alamofire/Alamofire" "4.8.2"
+github "ibireme/YYCategories" "1.0.4"
+github "jdg/MBProgressHUD" "1.1.0"
 github "onevcat/Kingfisher" "5.6.0"
+github "pkluz/PKHUD" "5.3.0"
+github "stephencelis/SQLite.swift" "0.12.2"
 github "zssq/ZSAppConfig" "1.0.4"

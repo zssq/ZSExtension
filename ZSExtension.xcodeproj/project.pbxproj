@@ -23,33 +23,37 @@
 		3DFC2A4822C21A5E0093A3F0 /* String+QSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2022C21A5C0093A3F0 /* String+QSExtension.swift */; };
 		3DFC2A4922C21A5E0093A3F0 /* UILabel+zhuishu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2122C21A5C0093A3F0 /* UILabel+zhuishu.swift */; };
 		3DFC2A4A22C21A5E0093A3F0 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2222C21A5C0093A3F0 /* Date+Extension.swift */; };
-		3DFC2A4B22C21A5E0093A3F0 /* NSDate+Date.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2322C21A5C0093A3F0 /* NSDate+Date.h */; };
+		3DFC2A4B22C21A5E0093A3F0 /* NSDate+Date.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2322C21A5C0093A3F0 /* NSDate+Date.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A4C22C21A5E0093A3F0 /* UITableViewCell+ZSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2422C21A5C0093A3F0 /* UITableViewCell+ZSExtension.swift */; };
-		3DFC2A4D22C21A5E0093A3F0 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2522C21A5C0093A3F0 /* NSData+Base64.h */; };
+		3DFC2A4D22C21A5E0093A3F0 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2522C21A5C0093A3F0 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A4E22C21A5E0093A3F0 /* UIFont+ZSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2622C21A5C0093A3F0 /* UIFont+ZSExtension.m */; };
 		3DFC2A4F22C21A5E0093A3F0 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2722C21A5C0093A3F0 /* UIViewController+Alert.swift */; };
 		3DFC2A5022C21A5E0093A3F0 /* Alamofire+ZSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2822C21A5C0093A3F0 /* Alamofire+ZSExtension.swift */; };
 		3DFC2A5122C21A5E0093A3F0 /* UIImage+QSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2922C21A5C0093A3F0 /* UIImage+QSData.swift */; };
-		3DFC2A5222C21A5E0093A3F0 /* NSString+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2A22C21A5D0093A3F0 /* NSString+Encode.h */; };
+		3DFC2A5222C21A5E0093A3F0 /* NSString+Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2A22C21A5D0093A3F0 /* NSString+Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A5322C21A5E0093A3F0 /* DateIntervalFormatter+formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2B22C21A5D0093A3F0 /* DateIntervalFormatter+formatter.swift */; };
 		3DFC2A5422C21A5E0093A3F0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2C22C21A5D0093A3F0 /* Reachability.swift */; };
 		3DFC2A5522C21A5E0093A3F0 /* NSDate+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2D22C21A5D0093A3F0 /* NSDate+Date.m */; };
 		3DFC2A5622C21A5E0093A3F0 /* DispatchTime+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A2E22C21A5D0093A3F0 /* DispatchTime+Extension.swift */; };
-		3DFC2A5722C21A5E0093A3F0 /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2F22C21A5D0093A3F0 /* NSDate+Extension.h */; };
+		3DFC2A5722C21A5E0093A3F0 /* NSDate+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A2F22C21A5D0093A3F0 /* NSDate+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A5822C21A5E0093A3F0 /* Array+ZSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3022C21A5D0093A3F0 /* Array+ZSExtension.swift */; };
 		3DFC2A5922C21A5E0093A3F0 /* UICollectionView+QSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3122C21A5D0093A3F0 /* UICollectionView+QSExtension.swift */; };
 		3DFC2A5A22C21A5E0093A3F0 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3222C21A5D0093A3F0 /* NSObject+Extension.swift */; };
 		3DFC2A5B22C21A5E0093A3F0 /* NotificationCenter+QSExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3322C21A5D0093A3F0 /* NotificationCenter+QSExtension.swift */; };
-		3DFC2A5C22C21A5E0093A3F0 /* UINavigationItem+BackItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A3422C21A5D0093A3F0 /* UINavigationItem+BackItem.h */; };
+		3DFC2A5C22C21A5E0093A3F0 /* UINavigationItem+BackItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A3422C21A5D0093A3F0 /* UINavigationItem+BackItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A5D22C21A5E0093A3F0 /* UINavigationItem+BackItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3522C21A5D0093A3F0 /* UINavigationItem+BackItem.m */; };
 		3DFC2A5E22C21A5E0093A3F0 /* UIView+ScreenShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3622C21A5D0093A3F0 /* UIView+ScreenShot.swift */; };
 		3DFC2A5F22C21A5E0093A3F0 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3722C21A5D0093A3F0 /* UIColor+Theme.swift */; };
 		3DFC2A6022C21A5E0093A3F0 /* UITableView+QSGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3822C21A5D0093A3F0 /* UITableView+QSGeneric.swift */; };
 		3DFC2A6122C21A5E0093A3F0 /* LocalizedUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3922C21A5E0093A3F0 /* LocalizedUtils.swift */; };
-		3DFC2A6222C21A5E0093A3F0 /* UIFont+ZSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A3A22C21A5E0093A3F0 /* UIFont+ZSExtension.h */; };
+		3DFC2A6222C21A5E0093A3F0 /* UIFont+ZSExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DFC2A3A22C21A5E0093A3F0 /* UIFont+ZSExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DFC2A6322C21A5E0093A3F0 /* UITableView+swizzling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFC2A3B22C21A5E0093A3F0 /* UITableView+swizzling.swift */; };
 		3DFC2A6622C21B8F0093A3F0 /* ZSAppConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6522C21B8F0093A3F0 /* ZSAppConfig.framework */; };
 		3DFC2A6822C21E600093A3F0 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6722C21E600093A3F0 /* Kingfisher.framework */; };
+		3DFC2A6A22C220590093A3F0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6922C220590093A3F0 /* Alamofire.framework */; };
+		3DFC2A6C22C221C00093A3F0 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6B22C221C00093A3F0 /* MBProgressHUD.framework */; };
+		3DFC2A6E22C232720093A3F0 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6D22C232710093A3F0 /* SQLite.framework */; };
+		3DFC2A7022C2327E0093A3F0 /* YYCategories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFC2A6F22C2327E0093A3F0 /* YYCategories.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +102,10 @@
 		3DFC2A3B22C21A5E0093A3F0 /* UITableView+swizzling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+swizzling.swift"; sourceTree = "<group>"; };
 		3DFC2A6522C21B8F0093A3F0 /* ZSAppConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZSAppConfig.framework; path = Carthage/Build/iOS/ZSAppConfig.framework; sourceTree = "<group>"; };
 		3DFC2A6722C21E600093A3F0 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		3DFC2A6922C220590093A3F0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3DFC2A6B22C221C00093A3F0 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		3DFC2A6D22C232710093A3F0 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		3DFC2A6F22C2327E0093A3F0 /* YYCategories.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYCategories.framework; path = Carthage/Build/iOS/YYCategories.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFC2A7022C2327E0093A3F0 /* YYCategories.framework in Frameworks */,
+				3DFC2A6E22C232720093A3F0 /* SQLite.framework in Frameworks */,
+				3DFC2A6C22C221C00093A3F0 /* MBProgressHUD.framework in Frameworks */,
+				3DFC2A6A22C220590093A3F0 /* Alamofire.framework in Frameworks */,
 				3DFC2A6822C21E600093A3F0 /* Kingfisher.framework in Frameworks */,
 				3DFC2A6622C21B8F0093A3F0 /* ZSAppConfig.framework in Frameworks */,
 			);
@@ -190,6 +202,10 @@
 		3DFC2A6422C21B8F0093A3F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DFC2A6F22C2327E0093A3F0 /* YYCategories.framework */,
+				3DFC2A6D22C232710093A3F0 /* SQLite.framework */,
+				3DFC2A6B22C221C00093A3F0 /* MBProgressHUD.framework */,
+				3DFC2A6922C220590093A3F0 /* Alamofire.framework */,
 				3DFC2A6722C21E600093A3F0 /* Kingfisher.framework */,
 				3DFC2A6522C21B8F0093A3F0 /* ZSAppConfig.framework */,
 			);

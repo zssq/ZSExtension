@@ -47,7 +47,7 @@ extension UIImageView{
                 return
             }
             let resource:ZSResource = ZSResource(url: imageURL)
-            self.kf.setImage(with: resource, placeholder: UIImage(named: "default_book_cover"), options: nil, progressBlock: nil, completionHandler: nil)
+            self.kf.setImage(with: resource, placeholder: UIImage(named: "default_book_cover"))
 //        }
     }
     
@@ -60,7 +60,8 @@ extension UIImageView{
             return
         }
         let resource:ZSResource = ZSResource(url: imageURL)
-        self.kf.setImage(with: resource, placeholder: UIImage(named: "default_avatar_light"), options: nil, progressBlock: nil, completionHandler: nil)
+        
+        self.kf.setImage(with: resource, placeholder: UIImage(named: "default_avatar_light"))
     }
     
     public func qs_addCorner(radius: CGFloat) {
@@ -96,7 +97,7 @@ extension UIButton{
             return
         }
         let resource:ZSResource = ZSResource(url: imageURL)
-        self.kf.setImage(with:resource, for: .normal, placeholder: UIImage(named:"default_book_cover"), options: nil, progressBlock: nil, completionHandler: nil)
+        self.kf.setImage(with: resource, for: .normal, placeholder: UIImage(named:"default_book_cover"))
     }
 }
 
