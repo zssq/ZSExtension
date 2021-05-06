@@ -22,7 +22,7 @@ pod 'ZSExtension'
 
 ## Author
 
-2252055382@qq.com, caonongyun@guazi.com
+2252055382@qq.com, 2252055382@qq.com
 
 ## License
 

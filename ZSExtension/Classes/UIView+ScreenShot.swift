@@ -133,3 +133,16 @@ extension UIView {
         self.layer.insertSublayer(layer, below: backgroundView.layer)
     }
 }
+
+extension UIView {
+    var height:CGFloat {
+        get {
+            return bounds.size.height
+        }
+        set {
+            var frame = self.frame
+            frame.size = CGSize(width: frame.size.width, height: newValue)
+            self.frame = frame
+        }
+    }
+}

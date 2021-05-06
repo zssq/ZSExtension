@@ -149,7 +149,7 @@ SOFTWARE.
 
 ## ZSAppConfig
 
-Copyright (c) 2019 2252055382@qq.com <caonongyun@guazi.com>
+Copyright (c) 2019 2252055382@qq.com <2252055382@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -172,7 +172,7 @@ THE SOFTWARE.
 
 ## ZSExtension
 
-Copyright (c) 2019 2252055382@qq.com <caonongyun@guazi.com>
+Copyright (c) 2019 2252055382@qq.com <2252055382@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
